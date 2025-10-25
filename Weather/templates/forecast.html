@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css"/>
+    <title>Weather!</title>
+</head>
+<body>
+    <h1>3-Day Forecast for {{ location }}, {{ region }}</h1>
+    <hr/>
+    <h2>
+       
+    </h2>
+    <table id="forecast">
+        <tr>
+            <th>{{ date [0] }}</th>
+            <th>{{ date [1] }}</th>
+            <th>{{ date [2] }}</th>
+        </tr>
+        <tr>
+            <td colspan="3">Currently: {{ forecast_today }}</td>
+        </tr>
+        <tr>
+            {% for temp in forecast_max %}
+            <td>Max: {{ temp }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for temp in forecast_min%}
+            <td>Min: {{ temp }}</td>
+            {% endfor %}
+        </tr>
+        <tr> 
+            {% for cor in forecast_cor %}
+            <td>Chance of rain: {{ cor }}%</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for condition in forecast_condition %}
+            <td class = "conditions-cell">
+                <p>Conditions:</p>
+                <img src="{{ condition }}"/>
+            </td>
+            {% endfor %}
+        </tr>
+    </table>
+    <a href = "/" class="btn-lg btn-success">
+    Search Again
+    </a>
+    <!-- <p>{{ all_data }}</p> -->
+</body>
+</html>

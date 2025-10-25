@@ -1,0 +1,4 @@
+flask
+requests
+dotenv
+Jinja2

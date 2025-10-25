@@ -1,0 +1,22 @@
+#forecast {
+    padding: 1em;
+    text-align: center;
+}
+
+table, td, th {
+    border: 5px solid #800080;
+    border-collapse: collapse;
+    padding: 0.55em;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    color: rgb(255, 255, 255);;}
+body{
+    background-color:black
+}
+a{
+    color: #FFFFFF;
+}
